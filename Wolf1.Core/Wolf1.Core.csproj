@@ -8,9 +8,4 @@
     <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="CreditReport\" />
-    <Folder Include="Sales\" />
-  </ItemGroup>
-
 </Project>
