@@ -11,7 +11,7 @@ namespace Wolf1.Core.Messages
     /// sent to the System's Report Queue, where there are processed as they
     /// come in.
     /// </summary>
-    class ReportRequest
+    class ReportRequest : Management.Message
     {
     }
 }

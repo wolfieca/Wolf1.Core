@@ -13,7 +13,7 @@ namespace Wolf1.Core.Messages
     /// Hold (either the date of expiration, or the time the HoldMessage is 
     /// responded to).
     /// </summary>
-    class HoldMessage : Management.IMessage
+    class HoldMessage : Management.Message
     {
     }
 }
