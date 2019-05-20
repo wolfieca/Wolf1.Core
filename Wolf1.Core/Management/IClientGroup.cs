@@ -4,10 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    interface IMessage
+    interface IClientGroup
     {
     }
 }

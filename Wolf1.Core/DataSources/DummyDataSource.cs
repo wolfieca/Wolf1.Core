@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.DataSources
 {
-    class DBDataSource : DataSource
+    class DummyDataSource : DataSource
     {
     }
 }

@@ -19,8 +19,8 @@ namespace Wolf1.Core
         Object Query(Object requested);
         Boolean Update(Object requested);
 
-        Object getField(String fieldName);
+        Object GetField(String fieldName);
 
-        Object rollback();
+        Object Rollback();
      }
 }

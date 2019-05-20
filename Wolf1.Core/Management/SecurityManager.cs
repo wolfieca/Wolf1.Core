@@ -16,5 +16,9 @@ namespace Wolf1.Core.Management
     /// </summary>
     class SecurityManager
     {
+        public bool CheckAccess(IBaseObject requestedObject, User requester, Access requested)
+        {
+
+        }
     }
 }

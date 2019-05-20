@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Wolf1.Core.Management
+namespace Wolf1.Core.DataSources
 {
     /// <summary>
     /// 
@@ -19,7 +19,7 @@ namespace Wolf1.Core.Management
             throw new NotImplementedException();
         }
 
-        public object getField(string fieldName)
+        public object GetField(string fieldName)
         {
             throw new NotImplementedException();
         }
@@ -29,7 +29,7 @@ namespace Wolf1.Core.Management
             throw new NotImplementedException();
         }
 
-        public object rollback()
+        public object Rollback()
         {
             throw new NotImplementedException();
         }

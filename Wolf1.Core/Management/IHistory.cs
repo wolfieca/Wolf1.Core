@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Wolf1.Core.DataSources
+namespace Wolf1.Core.Management
 {
-    class DBDataSource : DataSource
+    interface IHistory
     {
     }
 }
