@@ -23,6 +23,9 @@ namespace Wolf1.Core.Management
         int CollectionChargeMaxDollarBase { get; set; }
         int NoLetterReturnToClientMin { get; set; }
         int SalesTax { get; set; }
-
+        IPostingPriority[] PostingPriorities { get; set; }
+        int NoFeeDays { get; set; }
+        ITier[] Tiers { get; set; }
+        int ReturnDates { get; set; }
     }
 }

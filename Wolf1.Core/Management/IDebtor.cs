@@ -11,10 +11,6 @@ namespace Wolf1.Core.Management
     interface IDebtor
     {
         int DebtorNumber { get; set; }
-        String LastName { get; set; }
-        String FirstName { get; set; }
-        String Suffix { get; set; }
-        String Title { get; set; }
         Decimal CurrentBalance { get; set;}
         Decimal OriginalBalance { get; set; }
         IDemographics Demographics { get; set; }
