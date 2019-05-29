@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IClient
+    interface IUser
     {
-        IOffice ClientOffice { get; set; }
     }
 }
