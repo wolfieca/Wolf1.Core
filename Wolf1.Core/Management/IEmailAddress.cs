@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IHistory
+    interface IEmailAddress
     {
-        Dictionary<DateTime, IHistoryItem> History { get; set; }
+        String Address { get; set; }
+
+        Boolean Validate();
     }
 }

@@ -14,5 +14,6 @@ namespace Wolf1.Core.Management
         String NameTraditional();
         String NameSortable();
         String NameFormal();
+        String ProperName();
     }
 }

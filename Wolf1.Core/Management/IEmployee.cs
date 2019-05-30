@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IHistory
+    interface IEmployee : IPerson
     {
-        Dictionary<DateTime, IHistoryItem> History { get; set; }
+        IOffice Office { get; set; }
+        int EmployeeID { get; set; }
+        
     }
 }

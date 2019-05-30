@@ -6,11 +6,13 @@ namespace Wolf1.Core.Management
 {
     interface IAddress
     {
+        IPersonName Addressee { get; set; }
         IAddress StreetAddress { get; set; }
         String POBox { get; set; }
         IPersonName Attention { get; set; }
         String City { get; set; }
         IState State { get; set; }
         IZipCode Zip { get; set; }
+        Boolean MailReturned { get; set; }
     }
 }

@@ -12,6 +12,6 @@ namespace Wolf1.Core.Management
         IZipCode MinZipCode { get; set; }
         IZipCode MaxZipCode { get; set; }
 
-        Boolean ZipInState(int ZipCode);
+        Boolean ZipInState(IZipCode ZipCode);
     }
 }

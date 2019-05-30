@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IHistory
+    interface IServices
     {
-        Dictionary<DateTime, IHistoryItem> History { get; set; }
+        String Name { get; set; }
+        IOffice Primary { get; set; }
     }
 }
