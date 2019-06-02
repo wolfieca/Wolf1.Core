@@ -7,6 +7,7 @@ namespace Wolf1.Core.Management
     interface IServices
     {
         String Name { get; set; }
-        IOffice Primary { get; set; }
+        IOffice PrimaryOffice { get; set; }
+        Boolean PreCollectOnly { get; set; }
     }
 }

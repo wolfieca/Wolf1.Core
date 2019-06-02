@@ -5,8 +5,14 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    class Asset : IBaseObject
+    class Asset : IAsset
     {
-        public AccessControlList ACL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string AssetTag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int PurchasePrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public DateTime PurchaseDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int PaymentsRemaining { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int PaymentAmount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IHistory ServiceHistory { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

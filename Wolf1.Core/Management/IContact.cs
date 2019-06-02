@@ -13,7 +13,6 @@ namespace Wolf1.Core.Management
         Boolean Active { get; set; }
         Boolean Primary { get; set; }
         List<String> Notes { get; set; }
-
-        
+        IHistory History { get; set; }
     }
 }

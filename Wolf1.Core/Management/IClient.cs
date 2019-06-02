@@ -5,8 +5,9 @@ using Wolf1.Core.Statistics;
 
 namespace Wolf1.Core.Management
 {
-    interface IClient
+    interface IClient : ICompany
     {
+        String ClientID { get; set; }
         ICompany Company { get; set; }
         IOffice ClientOffice { get; set; }
         List<IServices> ActiveServices { get; set; }
@@ -17,5 +18,6 @@ namespace Wolf1.Core.Management
         DateTime UploadedNewbiz { get; set; }
         IFeeSchedule FeeSchedule { get; set; }
         Dictionary<String,IStatistics> ClientStatistics { get; set; }
+        List<IUser> Users { get; set; }
     }
 }

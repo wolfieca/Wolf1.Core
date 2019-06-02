@@ -8,6 +8,8 @@ namespace Wolf1.Core.Management
     {
         String Name { get; set; }
         IAddress Address { get; set; }
+        IEmployee Manager { get; set; }
         List<IServices> Services { get; set; }
+        ICompanyHours BusinessHours { get; set; }
     }
 }
