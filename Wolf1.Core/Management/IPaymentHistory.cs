@@ -6,7 +6,7 @@ namespace Wolf1.Core.Management
 {
     interface IPaymentHistory
     {
-        IPayment[] Payments { get; set; }
+        List<IPayment> Payments { get; set; }
 
         Boolean AddPayment(IPayment payment);
         Boolean VoidPayment(IPayment payment);

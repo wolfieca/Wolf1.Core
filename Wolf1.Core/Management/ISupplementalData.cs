@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IRight
+    interface ISupplementalData<T>
     {
-
+        T DataField { get; set; }
     }
 }

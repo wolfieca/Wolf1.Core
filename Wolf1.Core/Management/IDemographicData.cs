@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IRight
+    interface IDemographicData<Object> : ISupplementalData<Object>
     {
-
+        Boolean PHI { get; set; }
     }
 }

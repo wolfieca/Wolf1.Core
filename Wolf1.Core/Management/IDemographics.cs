@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class IDemographics
+    interface IDemographics : ISupplemental
     {
+        Dictionary<String, IDemographicData<Object>> Demographics { get; set; }
     }
 }

@@ -17,6 +17,7 @@ namespace Wolf1.Core.Management
         IEmployee Supervisor { get; set; }
         IPhoneNumber WorkPhone { get; set; }
         IEmailAddress WorkEmailAddress { get; set; }
+        Boolean Fulltime { get; set; }
         History History { get; set; }
     }
 }

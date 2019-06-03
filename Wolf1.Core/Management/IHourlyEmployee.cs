@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IRight
+    interface IHourlyEmployee : IEmployee
     {
-
+        int HourlyPay { get; set; }
     }
 }

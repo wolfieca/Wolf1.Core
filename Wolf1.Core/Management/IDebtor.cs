@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Wolf1.Core.Legal;
 
 namespace Wolf1.Core.Management
 {
@@ -17,7 +18,13 @@ namespace Wolf1.Core.Management
         IHistory History { get; set; }
         IClient PrimaryClient { get; set; }
         IPayment Payments { get; set; }
-        Legal.ILegalAction LegalActions { get; set; }
+        ILegalAction LegalActions { get; set; }
         ICollector Collector { get; set; }
+
+        IDebtor Merge(IDebtor DebtorToMerge);
+        IDebtor Merge(IDebtor DebtorToMerge, List<IDebt> DebtsToMerge);
+        IDebtor Merge(List<IDebt> DebtsToMerge);
+        IDebtor Split(List<IDebt> DebtsToSplit);
+        
     }
 }

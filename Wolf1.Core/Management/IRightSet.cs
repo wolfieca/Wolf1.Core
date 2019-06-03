@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IRight
+    interface IRightSet
     {
+        Dictionary<String, Boolean> Rights { get; set; }
 
     }
 }
