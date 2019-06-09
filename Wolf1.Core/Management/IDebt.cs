@@ -11,6 +11,8 @@ namespace Wolf1.Core.Management
         IClient Client { get; set; }
         IFeeSchedule FeeSchedule { get; set; }
         Boolean EverMailReturn { get; set; }
+        Boolean Locked { get; set; }
+        Boolean AccrueInterest { get; set; }
         DateTime ReceivedDate { get; set; }
         DateTime DateOfLastPayment { get; set; }
         DateTime ClientDateOfLastCharge { get; set; }
@@ -27,5 +29,8 @@ namespace Wolf1.Core.Management
         IState PlacementState { get; set; }
         List<String> Comments { get; set; }
         IHistory History { get; set; }
+
+        Boolean UpdateInterest();
+        Boolean ApplyPayment(IPayment Payment);
     }
 }

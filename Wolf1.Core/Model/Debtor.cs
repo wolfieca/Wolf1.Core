@@ -10,16 +10,50 @@ namespace Wolf1.Core.Model
     {
         private int _DebtorNumber;
         private IDemographics _Demographics;
+        private IHistory _History;
+        private IPaymentHistory _Payments;
+        private Dictionary<int, ILegalAction> _LegalActions;
+        private ICollector _Collector;
+        private ISupplemental _SupplementalData;
+        private DateTime _OriginalReceivedDate;
+        private Dictionary<int, IDebt> _Debts;
+        private Boolean _MailReturn;
+        private Boolean _Locked;
+        private Boolean _MergeAllowed;
+        private Boolean _SplitAllowed;
+        private IPerson _DebtorInfo;
 
-        public int DebtorNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal CurrentBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal OriginalBalance { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IDemographics Demographics { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IHistory History { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IClient PrimaryClient { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IPayment Payments { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ILegalAction LegalActions { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ICollector Collector { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+
+        public int DebtorNumber { get => _DebtorNumber; protected set { if (_DebtorNumber == 0) { _DebtorNumber = value; } } }
+        public decimal CurrentBalance { get => throw new NotImplementedException(); }
+        public decimal OriginalBalance { get => throw new NotImplementedException(); }
+        public IDemographics Demographics { get => _Demographics; protected set { _Demographics = value; } }
+        public IHistory History { get => _History; protected set { _History = value; } }
+        public IClient PrimaryClient { get => throw new NotImplementedException();  }
+        public IPaymentHistory Payments { get => _Payments; protected set => _Payments = value; }
+        public Dictionary<int,ILegalAction> LegalActions { get => _LegalActions; protected set => _LegalActions = value; }
+        public ICollector Collector { get => _Collector; protected set => _Collector = value; }
+        public ISupplemental SupplementalData { get => _SupplementalData; protected set => _SupplementalData = value; }
+        public DateTime OriginalReceivedDate { get => _OriginalReceivedDate; protected set => _OriginalReceivedDate = value; }
+        public Dictionary<int, IDebt> Debts { get => _Debts; protected set => _Debts = value; }
+       
+        public bool Locked { get => _Locked; protected set => throw new NotImplementedException(); }
+        public bool MergeAllowed { get => _MergeAllowed; protected set => _MergeAllowed = value; }
+        public bool SplitAllowed { get => _SplitAllowed; protected set => _SplitAllowed = value; }
+        public IPerson DebtorInfo { get => _DebtorInfo; protected set => _DebtorInfo=value; }
+
+        public bool MailReturn { get => _MailReturn; protected set => _MailReturn = value; }
+
+        /// <summary>
+        /// Apply the specified payment. 
+        /// </summary>
+        /// <param name="Payment">The payment to apply.</param>
+        /// <returns>True if the call succeeds.</returns>
+        public bool ApplyPayment(IPayment Payment)
+        {
+            throw new NotImplementedException();
+        }
 
         public IDebtor Merge(IDebtor DebtorToMerge)
         {
@@ -32,6 +66,16 @@ namespace Wolf1.Core.Model
         }
 
         public IDebtor Merge(List<IDebt> DebtsToMerge)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollector Reassign(ICollector NewCollector)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ICollector Reassign(string CollectorType)
         {
             throw new NotImplementedException();
         }

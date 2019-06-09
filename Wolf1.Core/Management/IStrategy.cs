@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Wolf1.Core.Legal;
+using Wolf1.Core.Script;
 
 namespace Wolf1.Core.Management
 {
-    interface ILegal 
+    interface IStrategy : IScript
     {
-        Dictionary<String, ILegalData<Object>> LegalData { get; set; }
+        
     }
 }
