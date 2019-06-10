@@ -46,7 +46,13 @@ namespace Wolf1.Core.Model
         public bool MailReturn { get => _MailReturn; protected set => _MailReturn = value; }
 
         /// <summary>
-        /// Apply the specified payment. 
+        /// Apply the specified payment. This registers the payment with the 
+        /// Debtor, adding it to the Payment History for the Debtor. This is
+        /// accomplished by iterating through the relevant Debts, and calling
+        /// those Debts ApplyPayment methods. By implementation, a Payment is
+        /// applicable to only a single Debt, which simplifies this. The 
+        /// PaymentHistory for the Debtor is a conglomeration of the Debts'
+        /// respective PaymentHistor(ies).
         /// </summary>
         /// <param name="Payment">The payment to apply.</param>
         /// <returns>True if the call succeeds.</returns>
@@ -55,6 +61,13 @@ namespace Wolf1.Core.Model
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Merge a Debtor to this one.
+        /// </summary>
+        /// <param name="DebtorToMerge">The debtor to merge. Both Debtors
+        /// in a merge must have MergeAllowed set to true. Demographic
+        /// and Supplemental data are tested</param>
+        /// <returns></returns>
         public IDebtor Merge(IDebtor DebtorToMerge)
         {
             throw new NotImplementedException();

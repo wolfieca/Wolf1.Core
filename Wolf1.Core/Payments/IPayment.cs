@@ -1,21 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Wolf1.Core.Legal;
 using Wolf1.Core.Management;
 
 namespace Wolf1.Core
 {
     interface IPayment
     {
-        IDebtor Debtor { get; set; }
-        IDebt Debt { get; set; }
-        int PaymentAmount { get; set; }
-        int WriteOff { get; set; }
-        int RemainingBalance { get; set; }
-        String Reason { get; set; }
-        DateTime Added { get; set; }
-        DateTime Paid { get; set; }
+        IDebtor Debtor { get; }
+        IDebt Debt { get;  }
+        Decimal PaymentAmount { get;  }
+        Decimal WriteOff { get; }
+        Decimal RemainingBalance { get; }
+        Decimal Fee { get; }
+        Decimal ClientBase { get; }
+        IFeeSchedule FeeSchedule { get; }
+        ILegalAction Action { get; }
+        Dictionary<String, Decimal> BreakDown { get; }
+        Boolean Reversal { get; }
+        Boolean ReversalReason { get; }
+        IPayment ReversalMatch { get; }
+        IBatchType BatchType { get; }
+        String Reason { get; }
+        DateTime Added { get; }
+        DateTime Paid { get;  }
 
         Boolean Post();
+
     }
 }
