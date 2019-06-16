@@ -23,5 +23,6 @@ namespace Wolf1.Core.Management
             return (int.Parse(MaxZipCode.ZipCode) >= int.Parse(ZipCode.ZipCode)) &&
                 (int.Parse(MinZipCode.ZipCode) <= int.Parse(ZipCode.ZipCode));
         }
+
     }
 }
