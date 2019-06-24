@@ -10,7 +10,7 @@ namespace Wolf1.Core.Management
         IOffice Office { get; set; }
         int EmployeeID { get; set; }
         IUser SystemUser { get; set; }
-        List<IDocument> OnboardingDocuments { get; set; }
+        Dictionary<String, IDocument> OnboardingDocuments { get; set; }
         Dictionary<String, IWorkHours> DefaultWorkSchedule { get; set; }
         DateTime StartDate { get; set; }
         DateTime TerminationDate { get; set; }
@@ -19,5 +19,6 @@ namespace Wolf1.Core.Management
         IEmailAddress WorkEmailAddress { get; set; }
         Boolean Fulltime { get; set; }
         History History { get; set; }
+
     }
 }

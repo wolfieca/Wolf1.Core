@@ -7,7 +7,7 @@ using Wolf1.Core.Statistics;
 
 namespace Wolf1.Core.Management
 {
-    interface ICollector : IEmployee
+    interface ICollector : IHourlyEmployee
     {
         String CollectorID { get; set; }
         IPersonName Alias { get; set; }
