@@ -21,6 +21,7 @@ namespace Wolf1.Core.Model
         private Dictionary<int, IDebt> _Debts;
         private Boolean _MailReturn;
         private Boolean _Locked;
+        private Boolean _AccrueInterest;
         private Boolean _MergeAllowed;
         private Boolean _SplitAllowed;
         private IPerson _DebtorInfo;
@@ -51,6 +52,8 @@ namespace Wolf1.Core.Model
         public Dictionary<string, IDocument> EmployeeDocuments => _EmployeeDocuments;
 
         public IMessageQueue MessageQueue => _MessageQueue;
+
+        public bool AccrueInterest { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         /// <summary>
         /// Apply the specified payment. This registers the payment with the 

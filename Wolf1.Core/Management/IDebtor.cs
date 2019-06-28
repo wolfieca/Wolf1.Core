@@ -28,6 +28,7 @@ namespace Wolf1.Core.Management
         Dictionary<int, IDebt> Debts { get;  }
         Boolean MailReturn { get; }
         Boolean Locked { get;  }
+        Boolean AccrueInterest { get; set; }
         Boolean MergeAllowed { get; }
         Boolean SplitAllowed { get;  }
         Dictionary<String, IDocument> EmployeeDocuments { get; }

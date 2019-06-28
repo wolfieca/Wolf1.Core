@@ -20,11 +20,11 @@ namespace Wolf1.Core.Management
         DateTime LastInterest { get; set; }
         Dictionary<String, int> Owed { get; set; }
         Dictionary<String, int> Paid { get; set; }
-        int OriginalBalance { get; set; }
-        int AttorneyFee { get; set; }
-        int AgencyFee { get; set; }
-        int TotalPaid { get; set; }
-        int CurrentBalance { get; set; }
+        Decimal OriginalBalance { get; set; }
+        Decimal AttorneyFee { get; set; }
+        Decimal AgencyFee { get; set; }
+        Decimal TotalPaid { get; set; }
+        Decimal CurrentBalance { get; set; }
         IPaymentHistory Payments { get; set; }
         IState PlacementState { get; set; }
         List<String> Comments { get; set; }
