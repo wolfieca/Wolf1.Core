@@ -13,6 +13,7 @@ namespace Wolf1.Core.Management
     /// </summary>
     interface IDebtor
     {
+
         int DebtorNumber { get;  }
         IPerson DebtorInfo { get;  }
         Decimal CurrentBalance { get; }
@@ -23,7 +24,7 @@ namespace Wolf1.Core.Management
         IHistory History { get;  }
         IClient PrimaryClient { get;  }
         IPaymentHistory Payments { get;  }
-        Dictionary<int,ILegalAction> LegalActions { get;  }
+        Dictionary<String,ILegalAction> LegalActions { get;  }
         ICollector Collector { get; }
         Dictionary<int, IDebt> Debts { get;  }
         Boolean MailReturn { get; }
@@ -31,13 +32,14 @@ namespace Wolf1.Core.Management
         Boolean AccrueInterest { get; set; }
         Boolean MergeAllowed { get; }
         Boolean SplitAllowed { get;  }
-        Dictionary<String, IDocument> EmployeeDocuments { get; }
+        Dictionary<String, IDocument> DebtorDocuments { get; }
         IMessageQueue MessageQueue { get; }
 
-        IDebtor Merge(IDebtor DebtorToMerge);
-        IDebtor Merge(IDebtor DebtorToMerge, List<IDebt> DebtsToMerge);
-        IDebtor Merge(List<IDebt> DebtsToMerge);
-        IDebtor Split(List<IDebt> DebtsToSplit);
+        IDebtor[] Merge(IDebtor DebtorToMerge);
+        IDebtor[] Merge(IDebtor DebtorToMerge, List<IDebt> DebtsToMerge);
+        IDebtor[] Merge(List<IDebt> DebtsToMerge);
+        IDebtor[] Split(List<IDebt> DebtsToSplit);
+
 
         Boolean ApplyPayment(IPayment Payment);
         ICollector Reassign(ICollector NewCollector);
