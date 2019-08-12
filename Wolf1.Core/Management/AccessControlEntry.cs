@@ -18,5 +18,10 @@ namespace Wolf1.Core.Management
      */
     class AccessControlEntry
     {
+        private IUser _User;
+        private Access _Access;
+
+        public IUser User { get => _User; set => _User = value; }
+        public Access Access { get => _Access; set => _Access = value; }
     }
 }
