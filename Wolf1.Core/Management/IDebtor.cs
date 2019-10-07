@@ -34,16 +34,19 @@ namespace Wolf1.Core.Management
         Boolean SplitAllowed { get;  }
         Dictionary<String, IDocument> DebtorDocuments { get; }
         IMessageQueue MessageQueue { get; }
+        IStrategy Strategy { get; }
 
         IDebtor[] Merge(IDebtor DebtorToMerge);
         IDebtor[] Merge(IDebtor DebtorToMerge, List<IDebt> DebtsToMerge);
         IDebtor[] Merge(List<IDebt> DebtsToMerge);
         IDebtor[] Split(List<IDebt> DebtsToSplit);
 
-
         Boolean ApplyPayment(IPayment Payment);
         ICollector Reassign(ICollector NewCollector);
         ICollector Reassign(String CollectorType);
 
+        IAssignee Assign(IAssignee AssignTo);
+
+        Boolean ChangeStrategy(IStrategy NewStrategy);
     }
 }

@@ -27,6 +27,7 @@ namespace Wolf1.Core.Model
         private IPerson _DebtorInfo;
         private Dictionary<String, IDocument> _DebtorDocuments;
         private IMessageQueue _MessageQueue;
+        private IStrategy _Strategy;
 
         /// <summary>
         /// DebtorNumber is a system identifier for this debtor. This is distinct from
@@ -140,7 +141,11 @@ namespace Wolf1.Core.Model
         public bool MailReturn { get => _MailReturn; protected set => _MailReturn = value; }
 
         /// <summary>
-        /// Documents associated with this debtor.d
+        /// Documents associated with this debtor. This includes Itemized Statements,
+        /// and other support documents used to set up the debtor in the first place,
+        /// and letters that have been sent on the debtor (including debt-specific
+        /// letters), Credit Reports that have been pulled, phone recordings that
+        /// are associated with this debtor, etc.
         /// </summary>
         public Dictionary<string, IDocument> DebtorDocuments => _DebtorDocuments;
 
@@ -151,7 +156,17 @@ namespace Wolf1.Core.Model
         /// </summary>
         public IMessageQueue MessageQueue => _MessageQueue;
 
+        /// <summary>
+        /// Are this debtor's debts allowed to accrue interest?
+        /// </summary>
         public bool AccrueInterest { get => _AccrueInterest; set => _AccrueInterest = value; }
+
+        /// <summary>
+        /// What is this debtor's current strategy? This is primarily for
+        /// reference, since strategyies are largely self-running via the 
+        /// message mechanism.
+        /// </summary>
+        public IStrategy Strategy { get => _Strategy; protected set => _Strategy = value; }
 
         /// <summary>
         /// Apply the specified payment. This registers the payment with the 
@@ -165,6 +180,28 @@ namespace Wolf1.Core.Model
         /// <param name="Payment">The payment to apply.</param>
         /// <returns>True if the call succeeds.</returns>
         public bool ApplyPayment(IPayment Payment)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Assign this debtor to an Assignee (Attorney or Forwarder).
+        /// </summary>
+        /// <param name="AssignTo">The Assignee to send the debtor to.
+        /// </param>
+        /// <returns>The specified Assignee if successful, NULL 
+        /// otherwise.</returns>
+        public IAssignee Assign(IAssignee AssignTo)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Change the active strategy for this debtor.
+        /// </summary>
+        /// <param name="NewStrategy"></param>
+        /// <returns></returns>
+        public bool ChangeStrategy(IStrategy NewStrategy)
         {
             throw new NotImplementedException();
         }
@@ -265,5 +302,7 @@ namespace Wolf1.Core.Model
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }
