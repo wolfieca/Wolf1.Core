@@ -15,9 +15,9 @@ namespace Wolf1.Core.Messages
     class EquipmentLoss : IMessage
     {
         public IPerson ResponsibleParty { get; protected set; }
-        public int RepairCost { get; set; }
-        public int OtherCosts { get; set; }
-        public int WriteOffAmount { get;  protected set; }
+        public decimal RepairCost { get; set; }
+        public decimal OtherCosts { get; set; }
+        public decimal WriteOffAmount { get;  protected set; }
         public String Description { get; protected set; }
         public List<IDocument> LossDocuments { get; protected set; }
     }

@@ -13,10 +13,11 @@ namespace Wolf1.Core.Accounting
     {
         String AssetTag { get; set; }
         String Description { get; set; }
-        int PurchasePrice { get; set; }
+        decimal PurchasePrice { get; set; }
         DateTime PurchaseDate { get; set; }
         int PaymentsRemaining { get; set; }
         int PaymentAmount { get; set; }
         IHistory ServiceHistory { get; set; }
+        decimal Depreciation{get; set;}
     }
 }
