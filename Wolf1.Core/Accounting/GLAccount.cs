@@ -11,6 +11,11 @@ namespace Wolf1.Core.Accounting
         public int AccountNumber { get => AccountNumber; set => AccountNumber = value; }
         public string Comments { get=>Comments; set => Comments = value; }
         public TransactionRegister Transactions { get => Transactions; set => Transactions = value; }
-
+        public DateTime Created { get => Created; private set => Created = value; }
+        public DateTime LastTransaction { get => LastTransaction; private set => LastTransaction = value; }
+        public Decimal TotalDebitAmount { get => TotalDebitAmount; private set => TotalDebitAmount = value; }
+        public int DebitCount { get => DebitCount; private set => DebitCount = value; }
+        public Decimal TotalCreditAmount { get => TotalCreditAmount; private set => TotalCreditAmount = value; }
+        public int CreditCount { get => CreditCount; private set => CreditCount = value; }
     }
 }
