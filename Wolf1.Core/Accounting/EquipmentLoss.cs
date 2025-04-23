@@ -18,7 +18,7 @@ namespace Wolf1.Core.Messages
         public decimal RepairCost { get; set; }
         public decimal OtherCosts { get; set; }
         public decimal WriteOffAmount { get;  protected set; }
-        public String Description { get; protected set; }
+        public string Description { get; protected set; }
         public List<IDocument> LossDocuments { get; protected set; }
     }
 }

@@ -12,11 +12,20 @@ namespace Wolf1.Core.Accounting
     /// </summary>
     class Transaction : IBaseObject
     {
-        public AccessControlList ACL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        public AccessControlList ACL { get => ACL; private set => ACL = value; }
+        public string TransactionID { get => TransactionID; private set => TransactionID = value; }
         public User Originator { get => Originator; private set => Originator = value; }
+        public User ApprovedBy { get => ApprovedBy; privaate set => ApprovedBy = value; }
+        public GLAccount Account { get => Account; private set => Account = value; }
         public DateTime TransactionDate { get => TransactionDate; private set => TransactionDate = value; }
-        public ArrayList SubTransactions { get => SubTransactions; private set => SubTransactions = value;}
-        public Decimal TotalCredits { get => TotalCredits; private set => TotalCredits = value; }
-        public Decimal TotalDebits { get => TotalDebits; private set => TotalDebits = value; }
+        public DateTime ApprovalDate { get => ApprovalDate; private set => ApprovalDate = value; }
+        public DateTime PostDate { get => PostDate; private set => PostDate = value; }
+        public Decimal Credits { get => Credits; private set => Credits = value; }
+        public Decimal Debits { get => Debits; private set => Debits = value; }
+        public Transaction Reference { get => Reference; private set => Reference = value;
+        public string Memo { get => Memo; private set => Memo = value; }
+
+        
     }
 }
