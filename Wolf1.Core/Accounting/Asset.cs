@@ -7,6 +7,7 @@ namespace Wolf1.Core.Accounting
 {
     class Asset : IAsset
     {
+
         public string AssetTag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public decimal PurchasePrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -23,24 +23,81 @@ namespace Wolf1.Core.Management
         /// <summary>
         /// The associated User is the owner of this object.
         /// </summary>
-        public bool IsOwner { get; protected set; } 
-
+        public bool IsOwner { get; protected set; }
         public bool AllowRead { get; protected set; }
         public bool AllowWrite { get; protected set; }
         public bool AllowDelete { get; protected set; }
         public bool AllowAccess { get; protected set; }
         public bool AllowTakeOwnership { get; protected set; }
-        public bool AllowSpecial1 { get; protected set; }
-        public bool AllowSpecial2 { get; protected set; }
-        public bool AllowSpecial3 { get; protected set; }
-        public bool AllowSpecial4 { get; protected set; }
+        public bool AllowRemoteAccess { get; protected set; }
+        public bool AllowChangePermissions { get; protected set; }
+        public bool AllowCopy { get; protected set; }
+        public bool AllowChange { get; protected set; }
         public bool DenyWrite { get; protected set; }
         public bool DenyDelete { get; protected set; }
         public bool DenyAccess { get; protected set; }
         public bool DenyTakeOwnership { get; protected set; }
-        public bool DenySpecial1 { get; protected set; }
-        public bool DenySpecial2 { get; protected set; }
-        public bool DenySpecial3 { get; protected set; }
-        public bool DenySpecial4 { get; protected set; }
-    }
+        public bool DenyRemoteAccess { get; protected set; }
+        public bool DenyChangePermissions { get; protected set; }
+        public bool DenyCopy { get; protected set; }
+        public bool DenyChange { get; protected set; }
+        public bool AuditRead { get; protected set; }
+        public bool AuditWrite { get; protected set; }
+        public bool AuditDelete { get; protected set; }
+        public bool AuditAccess { get; protected set; }
+        public bool AuditTakeOwnership { get; protected set; }
+        public bool AuditRemoteAccess { get; protected set; }
+        public bool AuditChangePermissions { get; protected set; }
+        public bool AuditCopy { get; protected set; }
+        public bool AuditChange { get; protected set; }
+
+        public bool canRead()
+        {
+            return AllowRead && !DenyRead;
+        }
+        public bool canWrite()
+        {
+            return AllowWrite && !DenyWrite;
+        }
+        public bool canDelete()
+        {
+            return AllowDelete && !DenyDelete;
+        }
+        public bool canAccess()
+        {
+            return AllowAccess && !DenyAccess;
+        }
+        public bool canTakeOwnership()
+        {
+            return AllowTakeOwnership && !DenyTakeOwnership;
+        }
+        public bool canRemoteAccess()
+        {
+            return AllowRemoteAccess && !DenyRemoteAccess;
+        }
+        public bool canChangePermissions()
+        {
+            return AllowChangePermissions && !DenyChangePermissions;
+        }
+        public bool canCopy()
+        {
+            return AllowCopy && !DenyCopy;
+        }
+        public bool canChange()
+        {
+            return AllowChange && !DenyChange;
+        }
+
+        public bool takeOwnership (Access currentOwner)
+        {
+            if (!currentOwner.IsOwner)
+                return false;
+            if (this.canTakeOwnership())
+            {
+                this.IsOwner = true;
+                currentOwner.IsOwner = false;
+            }
+            return this.IsOwner;
+        }
+   }
 }

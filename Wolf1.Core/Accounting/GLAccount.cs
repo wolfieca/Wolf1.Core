@@ -17,5 +17,6 @@ namespace Wolf1.Core.Accounting
         public int DebitCount { get => DebitCount; private set => DebitCount = value; }
         public Decimal TotalCreditAmount { get => TotalCreditAmount; private set => TotalCreditAmount = value; }
         public int CreditCount { get => CreditCount; private set => CreditCount = value; }
+
     }
 }

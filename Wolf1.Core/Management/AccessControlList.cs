@@ -28,5 +28,10 @@ namespace Wolf1.Core.Management
         {
             throw new NotImplementedException();
         }
+
+        public bool requestReadAccess ( User user )
+        {
+            return false;
+        }
     }
 }

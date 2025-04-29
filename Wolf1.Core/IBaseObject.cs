@@ -10,6 +10,6 @@ namespace Wolf1.Core
     /// </summary>
     interface IBaseObject
     {
-        Management.AccessControlList ACL { get; set; }
+        Management.AccessControlList ACL { get;  }
     }
 }
