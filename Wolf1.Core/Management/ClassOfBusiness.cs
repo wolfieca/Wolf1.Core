@@ -6,5 +6,8 @@ namespace Wolf1.Core.Management
 {
     class ClassOfBusiness
     {
+        public string COBCode { get; private set; }
+        public string Title { get; private set; }
+        public bool IncludeInCreditReports { get; private set; }
     }
 }

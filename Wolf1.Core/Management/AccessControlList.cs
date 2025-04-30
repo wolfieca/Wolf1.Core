@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace Wolf1.Core.Management
@@ -13,10 +15,12 @@ namespace Wolf1.Core.Management
      */
     class AccessControlList
     {
-        private Dictionary<IUser, Access> _ACL;
+        private Dictionary<IUser, AccessControlEntry> _ACL;
 
-        public Dictionary<IUser,Access> ACL { get => _ACL; protected set => _ACL = value; }
+        public Dictionary<IUser,AccessControlEntry> ACL { get => _ACL; protected set => _ACL = value; }
 
+        public List<User> Readers {get => Readers; protected set => Readers = value;}
+        public User Writer { get => Writer; protected set => Writer = value;}
         /// <summary>
         /// Check whether the specified user is allowed the  level of access
         /// requested for the specified user.
@@ -29,8 +33,36 @@ namespace Wolf1.Core.Management
             throw new NotImplementedException();
         }
 
-        public bool requestReadAccess ( User user )
+        public bool RequestReadAccess ( User user )
         {
+            Readers.Add(user);
+            return false;
+        }
+        public bool RequestWriteAccess ( User user )
+        {
+            if ( this.Writer != null || this.Writer == user )
+            {
+                this.Writer = user;
+                return true;
+            } 
+            return false;
+        }
+        public bool ReleaseReadAccess(User user) 
+        {
+            if (Readers.Contains(user)) 
+            {
+                Readers.Remove (user);
+                return true;   
+            } 
+            return false;
+        }
+        public bool ReleaseWriteAccess ( User user ) 
+        {
+            if ( this.Writer == user )
+            {
+                this.Writer = null;
+                return true;
+            } 
             return false;
         }
     }

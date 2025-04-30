@@ -7,39 +7,39 @@ namespace Wolf1.Core.Management
 {
     class Attorney : IAssignee
     {
-        public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IAddress CompanyAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public ICompany Parent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IClassOfBusiness BusinessClass { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime AddDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IUser AddUser { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime UpdateDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IUser UpdateUser { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Dictionary<string, IPhoneNumber> PhoneNumber { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public Dictionary<string, ICompanyHours> Hours { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool AllowMarketingMaterials { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IAddress PhysicalAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IAddress MailingAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<IContact> Contacts { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IHistory History { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IMessageQueue CompanyQueue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public List<string> Notes { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Client { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Lead { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Active { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Inactive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public bool Dead { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ChangedToClient { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ChangedToLead { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ChangedToActive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ChangedToInactive { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime ChangedToDead { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Name { get ; set; }
+        public IAddress CompanyAddress {  get ; set;  }
+        public ICompany Parent {  get ; set;  }
+        public IClassOfBusiness BusinessClass {  get ; set; }
+        public DateTime AddDate {  get ; set; }
+        public IUser AddUser { get ; set ; }
+        public DateTime UpdateDate { get ; set ; }
+        public IUser UpdateUser { get ; set ; }
+        public Dictionary<string, IPhoneNumber> PhoneNumber { get ; set ; }
+        public Dictionary<string, ICompanyHours> Hours { get ; set ; }
+        public bool AllowMarketingMaterials { get ; set ; }
+        public IAddress PhysicalAddress { get ; set ; }
+        public IAddress MailingAddress { get ; set ; }
+        public List<IContact> Contacts { get ; set ; }
+        public IHistory History { get ; set ; }
+        public IMessageQueue CompanyQueue { get ; set ; }
+        public List<string> Notes { get ; set ; }
+        public bool Client { get ; set ; }
+        public bool Lead { get ; set ; }
+        public bool Active { get ; set ; }
+        public bool Inactive { get ; set ; }
+        public bool Dead { get ; set ; }
+        public DateTime ChangedToClient { get ; set ; }
+        public DateTime ChangedToLead { get ; set ; }
+        public DateTime ChangedToActive { get ; set ; }
+        public DateTime ChangedToInactive { get ; set ; }
+        public DateTime ChangedToDead { get ; set ; }
         public int Number { get; }
         public Decimal FilingFee { get; set; }
         public String Jurisdiction { get; set; }
         public IState JurisdictionState { get; set; }
         public String Comment { get; set; }
-        public List<IDebtor> AssignedDebtors { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public List<IDebtor> AssignedDebtors { get ; set ; }
 
         /// <summary>
         /// Assign the specified account to this attorney. This issues an
@@ -52,7 +52,8 @@ namespace Wolf1.Core.Management
         /// <returns>True if the successful</returns>
         public bool Assign(IDebtor DebtorToAssign)
         {
-            throw new NotImplementedException();
+            AssignedDebtors.Add (DebtorToAssign);
+            return false;
         }
 
         /// <summary>

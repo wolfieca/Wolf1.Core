@@ -33,6 +33,7 @@ namespace Wolf1.Core.Management
         public bool AllowChangePermissions { get; protected set; }
         public bool AllowCopy { get; protected set; }
         public bool AllowChange { get; protected set; }
+        public bool DenyRead { get; protected set;}
         public bool DenyWrite { get; protected set; }
         public bool DenyDelete { get; protected set; }
         public bool DenyAccess { get; protected set; }
@@ -51,48 +52,48 @@ namespace Wolf1.Core.Management
         public bool AuditCopy { get; protected set; }
         public bool AuditChange { get; protected set; }
 
-        public bool canRead()
+        public bool CanRead()
         {
             return AllowRead && !DenyRead;
         }
-        public bool canWrite()
+        public bool CanWrite()
         {
             return AllowWrite && !DenyWrite;
         }
-        public bool canDelete()
+        public bool CanDelete()
         {
             return AllowDelete && !DenyDelete;
         }
-        public bool canAccess()
+        public bool CanAccess()
         {
             return AllowAccess && !DenyAccess;
         }
-        public bool canTakeOwnership()
+        public bool CanTakeOwnership()
         {
             return AllowTakeOwnership && !DenyTakeOwnership;
         }
-        public bool canRemoteAccess()
+        public bool CanRemoteAccess()
         {
             return AllowRemoteAccess && !DenyRemoteAccess;
         }
-        public bool canChangePermissions()
+        public bool CanChangePermissions()
         {
             return AllowChangePermissions && !DenyChangePermissions;
         }
-        public bool canCopy()
+        public bool CanCopy()
         {
             return AllowCopy && !DenyCopy;
         }
-        public bool canChange()
+        public bool CanChange()
         {
             return AllowChange && !DenyChange;
         }
 
-        public bool takeOwnership (Access currentOwner)
+        public bool TakeOwnership (Access currentOwner)
         {
             if (!currentOwner.IsOwner)
                 return false;
-            if (this.canTakeOwnership())
+            if (this.CanTakeOwnership())
             {
                 this.IsOwner = true;
                 currentOwner.IsOwner = false;

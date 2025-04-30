@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Wolf1.Core.Report
+namespace Wolf1.Core.Reports
 {
     /// <summary>
     /// A ClientPaymentReport. This is a user-requested report on Wizard, and
