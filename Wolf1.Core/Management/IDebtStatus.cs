@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IDebtStatus
+    public interface IDebtStatus
     {
         Boolean Ignore { get; set; }
         Boolean Submit { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Phone
 {
-    class PBX
+    public class PBX
     {
     }
 }

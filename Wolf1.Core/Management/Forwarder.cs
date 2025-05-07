@@ -5,7 +5,7 @@ using Wolf1.Core.MessageQueues;
 
 namespace Wolf1.Core.Management
 {
-    class Forwarder : IAssignee
+    public class Forwarder : IAssignee
     {
         public string Name { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IAddress CompanyAddress { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

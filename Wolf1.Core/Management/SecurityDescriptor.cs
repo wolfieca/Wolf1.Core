@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class SecurityDescriptor
+    public class SecurityDescriptor
     {
         IUser Owner { get; set; }
         //IGroup PrimaryGroup { get; set; }

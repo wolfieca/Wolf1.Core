@@ -9,7 +9,7 @@ namespace Wolf1.Core.Management
     /// bankruptcy claim statuses (i.e. chapter, adjudicated/discharged/
     /// dismissed, etc).
     /// </summary>
-    interface IBankruptcy : IStatus
+    public interface IBankruptcy : IStatus
     {
         int Chapter { get; }
     }

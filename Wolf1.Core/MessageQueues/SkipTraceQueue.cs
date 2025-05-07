@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.MessageQueues
 {
-    class SkipTraceQueue : MessageQueue
+    public class SkipTraceQueue : MessageQueue
     {
     }
 }

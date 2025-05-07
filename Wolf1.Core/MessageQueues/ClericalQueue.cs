@@ -8,7 +8,7 @@ namespace Wolf1.Core.MessageQueues
     /// A ClericalQueue is a straight message queue. Its primary distinction
     /// from MessageQueue is that it has a minimum permission to access
     /// </summary>
-    class ClericalQueue : MessageQueue
+    public class ClericalQueue : MessageQueue
     {
     }
 }

@@ -5,7 +5,7 @@ using Wolf1.Core.Legal;
 
 namespace Wolf1.Core.Management
 {
-    interface ILegal 
+    public interface ILegal 
     {
         Dictionary<String, ILegalData<Object>> LegalData { get; set; }
     }

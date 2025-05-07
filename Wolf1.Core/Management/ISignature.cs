@@ -6,7 +6,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Management
 {
-    interface ISignature
+    public interface ISignature
     {
         IPerson Signer { get; set; }
         DateTime SignDate { get; set; }

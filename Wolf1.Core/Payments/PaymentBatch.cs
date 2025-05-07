@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Payments
 {
-    class PaymentBatch
+    public class PaymentBatch
     {
     }
 }

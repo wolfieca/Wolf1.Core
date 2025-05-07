@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    class GLAccount : IBaseObject
+    public class GLAccount : IBaseObject
     {
         public AccessControlList ACL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int AccountNumber { get => AccountNumber; set => AccountNumber = value; }

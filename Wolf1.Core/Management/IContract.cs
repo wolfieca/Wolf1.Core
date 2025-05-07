@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IContract : Document.IDocument
+    public interface IContract : Document.IDocument
     {
         ISignature Signature { get; set; }
         ISignature CounterSignature { get; set; }

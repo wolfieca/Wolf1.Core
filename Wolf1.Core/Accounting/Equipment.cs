@@ -2,20 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 using Wolf1.Core.Management;
-using Wolf1.Core.Report;
+using Wolf1.Core.Reports;
 
 namespace Wolf1.Core.Accounting
 {
-    class Equipment : IEquipment, IReport
+    public class Equipment : IEquipment, IReport
     {
-        public IEmployee AssignedTo { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string AssetTag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal PurchasePrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public DateTime PurchaseDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int PaymentsRemaining { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int PaymentAmount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public IHistory ServiceHistory { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public decimal Depreciation { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public IEmployee AssignedTo { get; set;}
+        public string AssetTag { get; set;}
+        public string Description { get; set;}
+        public decimal PurchasePrice { get; set;}
+        public DateTime PurchaseDate { get; set;}
+        public int PaymentsRemaining { get; set;}
+        public int PaymentAmount { get; set;}
+        public IHistory ServiceHistory { get; set;}
+        public decimal Depreciation { get; set;}
+        public Decimal ResaleValue { get; set; }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IEmailAddress
+    public interface IEmailAddress
     {
         String Address { get; set; }
 

@@ -9,15 +9,17 @@ using Wolf1.Core.Script;
 
 namespace Wolf1.Core.Management
 {
-    enum Bankruptcy { NO,  CH07,  CH11, CH13 };
-    class AccountStatus
+    public enum Bankruptcy { NO,  CH07,  CH11, CH13 };
+    public class AccountStatus
     {
-        public string StatusCode {get; private set;}
-        public string Title {get;private set;}
-        public Bankruptcy BankruptcyType = Bankruptcy.NO;
-        public char StatusCategory;
-        public char StatusGroup;
-        public AccountStatus ChangeStatusTo;
-        public Strategy ChangeStrategyTo;
+        public string Code {get; private set;}
+        public bool CanLettersBeSent { get; private set;}
+        public string Desceiption {get;private set;}
+        public Bankruptcy BankruptStatus = Bankruptcy.NO;
+        public char StatusCategory {get; private set;}
+        public char StatusGroup {get; private set;}
+        public bool IncludeOnReturnReport {get; private set;}
+        public AccountStatus ChangeStatusTo {get; private set;}
+        public Strategy ChangeStrategyTo {get; private set;}
     }
 }

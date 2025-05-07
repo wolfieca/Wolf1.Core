@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Reports
 {
-    class CharityReport : IReport
+    public class CharityReport : IReport
     {
     }
 }

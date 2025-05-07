@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.System
 {
-    class Forms
+    public class Forms
     {
     }
 }

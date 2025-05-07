@@ -9,7 +9,7 @@ namespace Wolf1.Core.Accounting
     /// Goods such as land and building that belong to or are rented by the 
     /// company.
     /// </summary>
-    interface IProperty : IAsset
+    public interface IProperty : IAsset
     {
         IAddress Location { get; set; }
         IPerson Owner { get; set; }

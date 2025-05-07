@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Newbiz
 {
-    class NewbizManager
+    public class NewbizManager
     {
     }
 }

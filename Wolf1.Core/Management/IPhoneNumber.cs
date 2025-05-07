@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IPhoneNumber
+    public interface IPhoneNumber
     {
         String CountryCode { get; set; }
         String AreaCode { get; set; }

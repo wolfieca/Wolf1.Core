@@ -13,7 +13,7 @@ namespace Wolf1.Core.Management
      * is responsible for taking action to respond to the AccessControlLists
      * recommendations.
      */
-    class AccessControlList
+    public class AccessControlList
     {
         private Dictionary<IUser, AccessControlEntry> _ACL;
 

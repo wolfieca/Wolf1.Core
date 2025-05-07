@@ -11,7 +11,7 @@ namespace Wolf1.Core.Management
     /// The IDebtor interface represents individual debtors and the operations 
     /// that they can perform
     /// </summary>
-    interface IDebtor
+    public interface IDebtor
     {
 
         int DebtorNumber { get;  }

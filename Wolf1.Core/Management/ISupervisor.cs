@@ -5,7 +5,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Management
 {
-    interface ISupervisor : ISalariedEmployee
+    public interface ISupervisor : ISalariedEmployee
     {
         List<IEmployee> SupervisedEmployees { get; }
         Boolean Supervise(IEmployee Target);

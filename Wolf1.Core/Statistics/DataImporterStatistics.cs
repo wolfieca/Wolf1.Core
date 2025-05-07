@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Statistics
 {
-    class DataImporterStatistics
+    public class DataImporterStatistics
     {
     }
 }

@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    interface IComputer : IEquipment
+    public interface IComputer : IEquipment
     {
         Boolean Server { get; set; }
         Boolean Terminal { get; set; }

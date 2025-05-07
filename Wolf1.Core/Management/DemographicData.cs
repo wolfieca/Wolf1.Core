@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Model
 {
-    class DemographicData
+    public class DemographicData
     {
     }
 }

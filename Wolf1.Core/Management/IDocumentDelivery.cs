@@ -5,7 +5,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Management
 {
-    interface IDocumentDelivery
+    public interface IDocumentDelivery
     {
         IDocument Document { get; set; }
         Boolean Email { get; set; }

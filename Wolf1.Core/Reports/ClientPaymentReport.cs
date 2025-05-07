@@ -10,7 +10,7 @@ namespace Wolf1.Core.Reports
     /// There has to be something better for this. Moving to Wolf1, it's likely 
     /// moot.
     /// </summary>
-    class ClientPaymentReport
+    public class ClientPaymentReport
     {
     }
 }

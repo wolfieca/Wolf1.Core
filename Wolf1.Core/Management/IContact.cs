@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IContact : IPerson
+    public interface IContact : IPerson
     {
         String Title { get; set; }
         String Department { get; set; }

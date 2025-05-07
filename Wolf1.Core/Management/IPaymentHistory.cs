@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IPaymentHistory
+    public interface IPaymentHistory
     {
         List<IPayment> Payments { get; set; }
 

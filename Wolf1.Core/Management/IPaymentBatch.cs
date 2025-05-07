@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IPaymentBatch
+    public interface IPaymentBatch
     {
         int BatchMonth { get; }
         IOffice BatchOffice { get; }

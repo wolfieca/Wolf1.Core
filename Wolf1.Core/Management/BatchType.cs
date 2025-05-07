@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class BatchType : IBatchType
+    public class BatchType : IBatchType
     {
         private String _Type;
         private Boolean _Payment;

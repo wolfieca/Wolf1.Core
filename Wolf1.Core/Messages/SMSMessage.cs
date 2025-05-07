@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Messages
 {
-    class SMSMessage : Management.Message
+    public class SMSMessage : Message
     {
     }
 }

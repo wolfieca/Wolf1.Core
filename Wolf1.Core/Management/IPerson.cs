@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IPerson
+    public interface IPerson
     {
         IPersonName Name { get; set; }
         IAddress Address { get; set; }

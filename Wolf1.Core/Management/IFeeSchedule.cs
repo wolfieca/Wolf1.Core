@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IFeeSchedule
+    public interface IFeeSchedule
     {
         String FeeScheduleID { get; set; }
         String FeeScheduleName { get; set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class Rights
+    public class Rights
     {
     }
 }

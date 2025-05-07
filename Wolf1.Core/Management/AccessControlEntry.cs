@@ -16,7 +16,7 @@ namespace Wolf1.Core.Management
      * those rights that are applied to users that are not explicitly listed
      * in the AccessControlList).
      */
-    class AccessControlEntry
+    public class AccessControlEntry
     {
         private IUser _User;
         private Access _Access;

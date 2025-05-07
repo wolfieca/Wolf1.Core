@@ -6,7 +6,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core
 {
-    interface IPayment
+    public interface IPayment
     {
         IDebtor Debtor { get; }
         IDebt Debt { get;  }

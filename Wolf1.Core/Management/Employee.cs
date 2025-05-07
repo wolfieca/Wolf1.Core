@@ -5,7 +5,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Management
 {
-    class Employee : IEmployee
+    public class Employee : IEmployee
     {
         public IOffice Office { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int EmployeeID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

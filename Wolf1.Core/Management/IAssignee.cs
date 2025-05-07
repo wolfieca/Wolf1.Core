@@ -12,7 +12,7 @@ namespace Wolf1.Core.Management
     /// Debtors with addresses in states for which mail is restricted, and 
     /// Attorneys, who take legal actions against the debtor.
     /// </summary>
-    interface IAssignee : ICompany
+    public interface IAssignee : ICompany
     {
         List<IDebtor> AssignedDebtors { get; set; }
         Boolean Assign(IDebtor DebtorToAssign);

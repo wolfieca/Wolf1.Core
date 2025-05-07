@@ -12,6 +12,6 @@ namespace Wolf1.Core.Management
     public class Salesperson 
     {
         public string Code { get; private set; }
-        public string Title { get; private set; }
+        public string Name { get; private set; }
     }
 }

@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting 
 {
-    class TransactionRegister : IBaseObject
+    public class TransactionRegister : IBaseObject
     {
         public AccessControlList ACL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }

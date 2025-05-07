@@ -6,7 +6,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    class Vehicle : IVehicle
+    public class Vehicle : IVehicle
     {
         public string Manufacturer { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Model { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

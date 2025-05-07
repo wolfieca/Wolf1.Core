@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface ISupplementalData<T>
+    public interface ISupplementalData<T>
     {
         T DataField { get; set; }
     }

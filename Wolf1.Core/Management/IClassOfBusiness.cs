@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IClassOfBusiness
+    public interface IClassOfBusiness
     {
         int BusinessClassID { get; set; }
         String Description { get; set; }

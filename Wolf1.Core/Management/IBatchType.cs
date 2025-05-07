@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IBatchType
+    public interface IBatchType
     {
         String Type { get; }
         Boolean Payment { get; }

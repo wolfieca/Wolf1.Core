@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Legal
 {
-    class LegalData 
+    public class LegalData 
     {
     }
 }

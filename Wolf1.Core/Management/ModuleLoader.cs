@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class ModuleLoader
+    public class ModuleLoader
     {
     }
 }

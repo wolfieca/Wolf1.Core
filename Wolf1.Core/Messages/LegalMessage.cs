@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Messages
 {
-    class LegalMessage : Management.Message
+    public class LegalMessage : Message
     {
     }
 }

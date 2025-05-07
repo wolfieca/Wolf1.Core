@@ -7,7 +7,7 @@ using Wolf1.Core.MessageQueues;
 
 namespace Wolf1.Core.Runtime
 {
-    interface ISession
+    public interface ISession
     {
         IUser SessionOwner { get; set; }
         DateTime Start { get; set; }
@@ -15,6 +15,6 @@ namespace Wolf1.Core.Runtime
         IMessageQueue SessionQueue { get; set; }
 
         ISession CreateSession(IUser Owner);
-        Boolean Start();
+        
     }
 }

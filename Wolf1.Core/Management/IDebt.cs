@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IDebt
+    public interface IDebt
     {
         String Account { get; set; }
         IPerson ForWhom { get; set; }

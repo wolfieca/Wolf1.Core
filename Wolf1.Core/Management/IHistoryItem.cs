@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IHistoryItem
+    public interface IHistoryItem
     {
         DateTime ContactTime { get; set; }
         IUser User { get; set; }

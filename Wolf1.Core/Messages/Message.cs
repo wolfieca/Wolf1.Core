@@ -7,7 +7,9 @@ namespace Wolf1.Core.Messages
     /// <summary>
     /// 
     /// </summary>
-    class Message : IMessage
+    public class Message : IMessage
     {
+        public MessageHeader Header {get; protected set;}
+        public MessageBody Body { get; protected set;}
     }
 }

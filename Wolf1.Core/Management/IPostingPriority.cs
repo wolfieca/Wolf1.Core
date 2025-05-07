@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IPostingPriority
+    public interface IPostingPriority
     {
         String MonetaryFieldName { get; set; }
         int Priority { get; set; }

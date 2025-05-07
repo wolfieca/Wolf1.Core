@@ -8,7 +8,7 @@ namespace Wolf1.Core
     /// All the Wolf1 classes implement BaseObject. It specifies
     /// no methods otherwise.
     /// </summary>
-    interface IBaseObject
+    public interface IBaseObject
     {
         Management.AccessControlList ACL { get;  }
     }

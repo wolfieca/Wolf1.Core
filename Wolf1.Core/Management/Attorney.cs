@@ -5,7 +5,7 @@ using Wolf1.Core.MessageQueues;
 
 namespace Wolf1.Core.Management
 {
-    class Attorney : IAssignee
+    public class Attorney : IAssignee
     {
         public string Name { get ; set; }
         public IAddress CompanyAddress {  get ; set;  }

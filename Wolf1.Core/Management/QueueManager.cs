@@ -10,7 +10,7 @@ namespace Wolf1.Core.Management
     /// for so Messages can be sent to them, and adding or removing queues as
     /// required (i.e. a new collector as added, or an old collector retires.)
     /// </summary>
-    class QueueManager
+    public class QueueManager
     {
         private Dictionary<String, MessageQueues.IMessageQueue> Queues;
         private SecurityManager SecurityManager;
@@ -24,7 +24,7 @@ namespace Wolf1.Core.Management
         }
         public bool AddQueue(MessageQueues.IMessageQueue NewQueue)
         {
-            if (SecurityManager.)
+            return false;
         }
     }
 }

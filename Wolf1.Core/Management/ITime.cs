@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface ITime
+    public interface ITime
     {
         int Hour { get; set; }
         int Minute { get; set; }

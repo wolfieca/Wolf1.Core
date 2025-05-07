@@ -8,7 +8,7 @@ namespace Wolf1.Core.Management
     /// IState provides the core abstraction for entities like States,
     /// provinces, etc
     /// </summary>
-    interface IState
+    public interface IState
     {
         String StateName { get; set; }
         String StatePostAbbrev { get; set; }

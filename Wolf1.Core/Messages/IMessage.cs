@@ -7,7 +7,7 @@ namespace Wolf1.Core.Messages
     /// <summary>
     /// 
     /// </summary>
-    interface IMessage
+    public interface IMessage
     {
     }
 }

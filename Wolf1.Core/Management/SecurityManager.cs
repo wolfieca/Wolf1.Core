@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using System.Text;
 /**
  * SecurityManager is the primary security-related class in Wolf1.
@@ -14,11 +15,11 @@ namespace Wolf1.Core.Management
     /// <summary>
     /// 
     /// </summary>
-    class SecurityManager
+    public class SecurityManager
     {
         public bool CheckAccess(IBaseObject requestedObject, User requester, Access requested)
         {
-
+            return false;
         }
     }
 }

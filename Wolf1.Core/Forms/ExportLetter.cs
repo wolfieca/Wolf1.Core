@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Forms
 {
-    class ExportLetter : IForm
+    public class ExportLetter : IForm
     {
     }
 }

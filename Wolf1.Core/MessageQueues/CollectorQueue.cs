@@ -13,7 +13,7 @@ namespace Wolf1.Core.MessageQueues
     /// still messages waiting in the queue. The main queue is persistent,
     /// and can be queried or acted upon whether it's empty or not.
     /// </summary>
-    class CollectorQueue : IMessageQueue
+    public class CollectorQueue : IMessageQueue
     {
         public string QueueName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string QueueDescription { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

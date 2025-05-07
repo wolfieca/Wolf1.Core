@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Renderer
 {
-    interface IRenderer
+    public interface IRenderer
     {
     }
 }

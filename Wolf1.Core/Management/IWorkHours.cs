@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IWorkHours : ICompanyHours
+    public interface IWorkHours : ICompanyHours
     {
         ITime WorkStartTime { get; set; }
         ITime LunchStartTime { get; set; }

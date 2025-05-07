@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    class ClassOfBusiness
+    public class ClassOfBusiness
     {
         public string COBCode { get; private set; }
         public string Title { get; private set; }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Statistics
 {
-    interface IStatistics
+    public interface IStatistics
     {
         String Month { get; set; }
         String Year { get; set; }

@@ -5,7 +5,7 @@ using Wolf1.Core.Forms;
 
 namespace Wolf1.Core.Management
 {
-    interface ISystem
+    public interface ISystem
     {
         List<String> MoneyFields { get; }
         int LastDebtor { get; }

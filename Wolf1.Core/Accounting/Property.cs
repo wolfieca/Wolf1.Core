@@ -3,7 +3,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    class Property : IProperty
+    public class Property : IProperty
     {
         public IAddress Location { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IPerson Owner { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

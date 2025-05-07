@@ -6,7 +6,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Model
 {
-    class PaymentBatch : IPaymentBatch
+    public class PaymentBatch : IPaymentBatch
     {
         private int _BatchDate;
         private int _BatchMonth;

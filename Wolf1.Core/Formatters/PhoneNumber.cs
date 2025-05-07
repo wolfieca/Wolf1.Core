@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Formatters
 {
-    class PhoneNumber
+    public class PhoneNumber
     {
     }
 }

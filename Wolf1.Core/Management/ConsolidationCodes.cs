@@ -9,7 +9,7 @@ using Wolf1.Core.Script;
 
 namespace Wolf1.Core.Management
 {
-    class ConsolidationCodes
+    public class ConsolidationCodes
     {
         public string Code { get; private set; }
         public string Title { get; private set; }

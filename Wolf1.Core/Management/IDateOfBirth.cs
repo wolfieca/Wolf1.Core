@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IDateOfBirth
+    public interface IDateOfBirth
     {
         DateTime DOB { get; set; }
 

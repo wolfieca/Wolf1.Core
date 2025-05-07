@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Accounting
 {
-    interface IEquipment : IAsset
+    public interface IEquipment : IAsset
     {
         IEmployee AssignedTo { get; set; }
 

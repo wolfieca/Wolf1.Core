@@ -9,7 +9,7 @@ namespace Wolf1.Core.Accounting
     /// IAsset objects are assets belonging to the Company. This would typically
     /// include things like property, vehicles, and equipment
     /// </summary>
-    interface IAsset
+    public interface IAsset
     {
         String AssetTag { get; set; }
         String Description { get; set; }

@@ -12,7 +12,7 @@ namespace Wolf1.Core.Script
     /// Policies, Rules, and various other dynamic aspect of the system
     /// operations.
     /// </summary>
-    interface IScript
+    public interface IScript
     {
         String Name { get; set; }
         Dictionary<int, String> Script { get; set; }

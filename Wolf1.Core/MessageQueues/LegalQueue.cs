@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.MessageQueues
 {
-    class LegalQueue : MessageQueue
+    public class LegalQueue : MessageQueue
     {
     }
 }

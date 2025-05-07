@@ -8,7 +8,7 @@ using Wolf1.Core.Statistics;
 
 namespace Wolf1.Core.Management
 {
-    class Collector : ICollector
+    public class Collector : ICollector
     {
         public string CollectorID { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IPersonName Alias { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -13,7 +13,7 @@ namespace Wolf1.Core.MessageQueues
     /// MessageQueue objects are responsible to sending/receiving Messages
     /// between parts of the system
     /// </summary>
-    class MessageQueue : IMessageQueue
+    public class MessageQueue : IMessageQueue
     {
         public string QueueName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 

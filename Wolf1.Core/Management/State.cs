@@ -7,7 +7,7 @@ namespace Wolf1.Core.Management
     /// <summary>
     /// State represents States as found in the United States.
     /// </summary>
-    class State : IState
+    public class State : IState
     {
         private String _StateName;
         private String _StatePostAbbreviation;

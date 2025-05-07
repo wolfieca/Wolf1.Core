@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Messages
 {
-    interface EquipmentLossMessage
+    public interface EquipmentLossMessage
     {
     }
 }

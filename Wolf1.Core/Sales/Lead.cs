@@ -5,7 +5,7 @@ using Wolf1.Core.Model;
 
 namespace Wolf1.Core.Sales
 {
-    class Lead : Client
+    public class Lead : Client
     {
     }
 }

@@ -5,7 +5,7 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Legal
 {
-    interface ILegalAction
+    public interface ILegalAction
     {
         List<IDebt> IncludedDebts { get; set; }
         DateTime SuitDate { get; set; }

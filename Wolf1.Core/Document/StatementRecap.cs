@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Document
 {
-    class StatementRecap
+    public class StatementRecap
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface ILegalData<T> : ISupplementalData<T>
+    public interface ILegalData<T> : ISupplementalData<T>
     {
     }
 }

@@ -8,7 +8,7 @@ namespace Wolf1.Core.Management
     /// Classes implementing this interface reflect debtor account statuses,
     /// which are used to determine behaviors relating to the debtor
     /// </summary>
-    interface IStatus
+    public interface IStatus
     {
         String Code { get; set; }
         String Description { get; set; }

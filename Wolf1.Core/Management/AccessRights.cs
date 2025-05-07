@@ -7,7 +7,7 @@ namespace Wolf1.Core.Management
     /// <summary>
     /// 
     /// </summary>
-    class AccessRights
-    {
-    }
+    //public class AccessRights
+    //{
+    //}
 }

@@ -5,7 +5,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Accounting
 {
-    interface IVehicle : IAsset , IEquipment
+    public interface IVehicle : IAsset , IEquipment
     {
         String Manufacturer { get; set; }
         String Model { get; set; }

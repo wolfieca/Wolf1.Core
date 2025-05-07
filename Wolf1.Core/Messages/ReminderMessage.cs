@@ -10,7 +10,7 @@ namespace Wolf1.Core.Messages
     /// a ReminderMessage has not affect on the referenced object's message
     /// processing.
     /// </summary>
-    class ReminderMessage : Management.Message
+    public class ReminderMessage : Message
     {
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Model
 {
-    class Payment
+    public class Payment
     {
     }
 }

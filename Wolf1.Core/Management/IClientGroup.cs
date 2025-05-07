@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IClientGroup
+    public interface IClientGroup
     {
         String GroupName { get; set; }
         IClient PrimaryClient { get; set; }

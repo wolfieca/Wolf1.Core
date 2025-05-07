@@ -8,7 +8,7 @@ using Wolf1.Core.MessageQueues;
 
 namespace Wolf1.Core.Model
 {
-    class Debtor : IDebtor
+    public class Debtor : IDebtor
     {
         private int _DebtorNumber;
         private IDemographics _Demographics;

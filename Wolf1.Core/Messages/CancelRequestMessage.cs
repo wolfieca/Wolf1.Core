@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Messages
 {
-    class CancelRequestMessage : Management.Message
+    public class CancelRequestMessage : Message
     {
     }
 }

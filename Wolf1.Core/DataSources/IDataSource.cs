@@ -8,7 +8,7 @@ namespace Wolf1.Core
     /// 
     /// </summary>
 
-    interface IDataSource
+    public interface IDataSource
     {
         Object Inititialize();
         Object Inititialize(String connectionString);

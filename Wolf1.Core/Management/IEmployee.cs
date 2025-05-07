@@ -5,7 +5,7 @@ using Wolf1.Core.Document;
 
 namespace Wolf1.Core.Management
 {
-    interface IEmployee : IPerson
+    public interface IEmployee : IPerson
     {
         IOffice Office { get; set; }
         int EmployeeID { get; set; }

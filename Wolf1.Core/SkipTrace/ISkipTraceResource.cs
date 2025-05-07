@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.SkipTrace
 {
-    interface ISkipTraceResource
+    public interface ISkipTraceResource
     {
     }
 }

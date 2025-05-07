@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IClerical : IEmployee
+    public interface IClerical : IEmployee
     {
     }
 }

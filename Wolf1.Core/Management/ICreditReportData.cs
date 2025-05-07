@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface ICreditReportData
+    public interface ICreditReportData
     {
         DateTime OriginalReport { get; set; }
         IDebtStatus DebtStatus { get; set; }

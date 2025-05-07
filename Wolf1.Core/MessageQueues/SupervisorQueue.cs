@@ -7,7 +7,7 @@ namespace Wolf1.Core.MessageQueues
     /// <summary>
     /// 
     /// </summary>
-    class SupervisorQueue : MessageQueue
+    public class SupervisorQueue : MessageQueue
     {
     }
 }

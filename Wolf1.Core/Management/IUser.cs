@@ -6,7 +6,7 @@ using Wolf1.Core.Runtime;
 
 namespace Wolf1.Core.Management
 {
-    interface IUser
+    public interface IUser
     {
         IEmployee User { get; set; }
         String UserID { get; set; }

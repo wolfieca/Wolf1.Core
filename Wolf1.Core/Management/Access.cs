@@ -4,11 +4,45 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
+
+    [Flags]
+    public enum AccessRights 
+    {
+        None                =   0b0000_0000_0000_0000_0000_0000_0000_0000,
+        IsOwner             =   0b0000_0000_0001_0000_0000_0000_0000_0000,
+        AllowRead           =   0b0000_0000_0000_0000_0000_0000_0000_0001,
+        AllowWrite          =   0b0000_0000_0000_0000_0000_0000_0000_0010,
+        AllowDelete         =   0b0000_0000_0000_0000_0000_0000_0000_0100,
+        AllowAccess         =   0b0000_0000_0000_0000_0000_0000_0000_1000,
+        AllowTakeOwnership  =   0b0000_0000_0000_0000_0000_0000_0001_0000,
+        AllowChange         =   0b0000_0000_0000_0000_0000_0000_0010_0000,
+        AllowRemoteAccess   =   0b0000_0000_0000_0000_0000_0000_0100_0000,
+        AllowCopy           =   0b0000_0000_0000_0000_0000_0000_1000_0000,
+        DenyRead            =   0b0000_0000_0000_0000_0000_0001_0000_0000,
+        DenyWrite           =   0b0000_0000_0000_0000_0000_0010_0000_0000,
+        DenyDelete          =   0b0000_0000_0000_0000_0000_0100_0000_0000,
+        DenyAccess          =   0b0000_0000_0000_0000_0000_1000_0000_0000,
+        DenyTakeOwnership   =   0b0000_0000_0000_0000_0001_0000_0000_0000,
+        DenyChange          =   0b0000_0000_0000_0000_0010_0000_0000_0000,
+        DenyRemoteAccess    =   0b0000_0000_0000_0000_0100_0000_0000_0000,
+        DenyCopy            =   0b0000_0000_0000_0000_1000_0000_0000_0000,
+        AuditRead           =   0b0000_0000_0000_0001_0000_0000_0000_0000,
+        AuditWrite          =   0b0000_0000_0000_0010_0000_0000_0000_0000,
+        AuditDelete         =   0b0000_0000_0000_0100_0000_0000_0000_0000,
+        AuditAccess         =   0b0000_0000_0000_1000_0000_0000_0000_0000,
+        AuditTakeOwnership  =   0b0000_0000_0001_0000_0000_0000_0000_0000,
+        AuditChange         =   0b0000_0000_0010_0000_0000_0000_0000_0000,
+        AuditRemoteAccess   =   0b0000_0000_0100_0000_0000_0000_0000_0000,
+        AuditCopy           =   0b0000_0000_1000_0000_0000_0000_0000_0000,
+        AllowAll            =   AllowRead | AllowWrite | AllowDelete | AllowAccess | AllowTakeOwnership | AllowChange | AllowRemoteAccess | AllowCopy,
+        DenyAll             =   DenyRead | DenyWrite | DenyDelete | DenyAccess | DenyTakeOwnership | DenyChange | DenyRemoteAccess | AllowCopy,
+        AuditAll            =   AuditRead | AuditWrite | AuditDelete | AuditAccess | AuditTakeOwnership | AuditChange | AuditRemoteAccess | AuditCopy
+    }
     /// <summary>
     /// Access levels. This is used by the SecurityManager to determine
     /// access to specific objects in the system.
     /// </summary>
-    class Access
+    public class Access
     {
         /// <summary>
         /// _AccessMask consists of a 32-bit mask, which is made up of an 
@@ -19,7 +53,8 @@ namespace Wolf1.Core.Management
         private int _AccessMask;
 
         public int AccessMask { get => _AccessMask; protected set => _AccessMask = value; }
-
+        private AccessRights _accessRight = 0;
+        
         /// <summary>
         /// The associated User is the owner of this object.
         /// </summary>

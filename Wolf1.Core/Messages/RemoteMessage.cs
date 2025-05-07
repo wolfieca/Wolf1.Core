@@ -10,7 +10,7 @@ namespace Wolf1.Core.Messages
     /// a request file (usually XML). and then wait for a response file to
     /// to place in the system.
     /// </summary>
-    class RemoteMessage : Management.Message
+    public class RemoteMessage : Message
     {
     }
 }

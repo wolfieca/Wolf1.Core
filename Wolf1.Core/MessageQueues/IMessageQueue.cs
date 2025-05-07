@@ -10,7 +10,7 @@ namespace Wolf1.Core.MessageQueues
     /// routing messages throughout the system. They don't actually process
     /// the messages, they just send them where they belong.
     /// </summary>
-    interface IMessageQueue
+    public interface IMessageQueue
     {
         String QueueName { get; set; }
         String QueueDescription { get; set; }

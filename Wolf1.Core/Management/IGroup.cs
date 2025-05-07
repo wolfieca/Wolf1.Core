@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    interface IGroup 
+    public interface IGroup 
     {
         String GroupName { get; set; }
         List<IUser> Users { get; set; }

@@ -12,7 +12,7 @@ namespace Wolf1.Core.Management
     /// if they were resolved; and what it's currently set to do the next 
     /// time a CreditReport file is produced.
     /// </summary>
-    class CreditReportingStatus
+    public class CreditReportingStatus
     {
     }
 }
