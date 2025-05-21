@@ -7,18 +7,18 @@ namespace Wolf1.Core.Management
 {
     public interface IEmployee : IPerson
     {
-        IOffice Office { get; set; }
-        int EmployeeID { get; set; }
-        IUser SystemUser { get; set; }
-        Dictionary<String, IDocument> OnboardingDocuments { get; set; }
-        Dictionary<String, IWorkHours> DefaultWorkSchedule { get; set; }
-        DateTime StartDate { get; set; }
-        DateTime TerminationDate { get; set; }
-        IEmployee Supervisor { get; set; }
-        IPhoneNumber WorkPhone { get; set; }
-        IEmailAddress WorkEmailAddress { get; set; }
-        Boolean Fulltime { get; set; }
-        History History { get; set; }
-
+        IOffice Office { get; }
+        int EmployeeID { get; }
+        IUser SystemUser { get; }
+        Dictionary<String, IDocument> OnboardingDocuments { get; }
+        Dictionary<String, IWorkHours> DefaultWorkSchedule { get; }
+        DateTime StartDate { get; }
+        DateTime TerminationDate { get; }
+        IEmployee Supervisor { get; }
+        IPhoneNumber WorkPhone { get; }
+        IEmailAddress WorkEmailAddress { get; }
+        Boolean Fulltime { get; }
+        Boolean CanBeRehired { get; }
+        History History { get; }
     }
 }

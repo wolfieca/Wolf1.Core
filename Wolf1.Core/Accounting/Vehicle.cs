@@ -23,9 +23,10 @@ namespace Wolf1.Core.Accounting
         public string AssetTag { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public decimal PurchasePrice { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public decimal RemainingOwed { get => throw new NotImplementedException(); private set => throw new NotImplementedException();}
         public DateTime PurchaseDate { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int PaymentsRemaining { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int PaymentAmount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public decimal PaymentAmount { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public IHistory ServiceHistory { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public decimal Depreciation { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }

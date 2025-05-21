@@ -38,67 +38,67 @@ namespace Wolf1.Core.Accounting
         public Transaction Reference { get => Reference; private set => Reference = value; }
         public string Memo { get => Memo; private set => Memo = value; }
 
-        public Transaction withACL (AccessControlList ACL)
+        public Transaction WithACL (AccessControlList ACL)
         {
             this.ACL = ACL;
             return this;
         }
-        public Transaction withTransactionID ( string TransactionID)
+        public Transaction WithTransactionID ( string TransactionID)
         {
             this.TransactionID = TransactionID;
             return this;
         }
-        public Transaction withOriginator ( User Originator)
+        public Transaction WithOriginator ( User Originator)
         {
             this.Originator = Originator;
             return this;
         }
-        public Transaction withApprovedBy ( User ApprovedBy )
+        public Transaction WithApprovedBy ( User ApprovedBy )
         {
             this.ApprovedBy = ApprovedBy;
             return this;
         }
-        public Transaction forAccount ( GLAccount Account )
+        public Transaction ForAccount ( GLAccount Account )
         {
             this.Account = Account;
             return this;
         }
-        public Transaction forTransactionDate ( DateTime TransactionDate ) 
+        public Transaction ForTransactionDate ( DateTime TransactionDate ) 
         {
             this.TransactionDate = TransactionDate;
             return this;
         }
-        public Transaction forPromiseDate( DateTime PromiseDate)
+        public Transaction ForPromiseDate( DateTime PromiseDate)
         {
             this.PromiseDate = PromiseDate;
             return this;
         }
-        public Transaction forApprovalDate ( DateTime ApprovalDate)
+        public Transaction ForApprovalDate ( DateTime ApprovalDate)
         {
             this.ApprovalDate = ApprovalDate;
             return this;
         }
-        public Transaction withPostDate ( DateTime PostDate )
+        public Transaction WithPostDate ( DateTime PostDate )
         {
             this.PostDate = PostDate;
-            return ths;
+            return this;
         }
-        public Transaction withCredits ( decimal Credits )
+        public Transaction WithCredits ( decimal Credits )
         {
             this.Credits = Credits;
             return this;
         }
-        public Transaction withDebits ( decimal Debits )
+        public Transaction WithDebits ( decimal Debits )
         {
             this.Debits = Debits;
             return this;
         }
-        public Transaction forReference ( Transaction Reference )
+        public Transaction ForReference ( Transaction Reference )
         {
             this.Reference = Reference;
             return this;
         }
-        public Transaction withMemo ( string Memo )
+        public Transaction WithMemo ( string Memo )
         {
             this.Memo = Memo;
             return this;

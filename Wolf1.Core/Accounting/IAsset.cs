@@ -16,7 +16,7 @@ namespace Wolf1.Core.Accounting
         decimal PurchasePrice { get; set; }
         DateTime PurchaseDate { get; set; }
         int PaymentsRemaining { get; set; }
-        int PaymentAmount { get; set; }
+        decimal PaymentAmount { get; set; }
         IHistory ServiceHistory { get; set; }
         decimal Depreciation{get; set;}
     }

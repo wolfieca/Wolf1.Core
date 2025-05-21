@@ -28,5 +28,6 @@ namespace Wolf1.Core.Accounting
         public IHistory ServiceHistory { get; set;}
         public decimal Depreciation { get; set;}
         public decimal ResaleValue {get; set; }
+        decimal IAsset.PaymentAmount { get => PaymentAmount; set => throw new NotImplementedException(); }
     }
 }

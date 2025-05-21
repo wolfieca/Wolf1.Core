@@ -31,6 +31,6 @@ namespace Wolf1.Core.Messages
         public Boolean WasOriginallyHold {get; private set;}
         public User UserCode { get; private set;}
         public DateTime QueueControl {get; private set;}
-        public ResultCode OriginalResultCode {get; private set}
+        public ResultCode OriginalResultCode {get; private set;}
     }
 }

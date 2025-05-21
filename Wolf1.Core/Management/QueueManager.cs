@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection.Metadata;
 using System.Text;
+using Wolf1.Core.MessageQueues;
+using Wolf1.Core.Messages;
 
 namespace Wolf1.Core.Management
 {
@@ -15,16 +18,33 @@ namespace Wolf1.Core.Management
         private Dictionary<String, MessageQueues.IMessageQueue> Queues;
         private SecurityManager SecurityManager;
 
-        public bool Lookup(String queueName)
+        public Boolean Lookup(String queueName)
         {
             if (Queues.ContainsKey(queueName))
                 return true;
             else
                 return false;
         }
-        public bool AddQueue(MessageQueues.IMessageQueue NewQueue)
+        public Boolean AddQueue(MessageQueues.IMessageQueue NewQueue)
         {
             return false;
         }
+        public Boolean RetireQueue(MessageQueues.IMessageQueue RetiredQueue, MessageQueues.IMessageQueue RollToQueue)
+        {
+            return false;
+        }
+        public Boolean RetireQueue(MessageQueues.IMessageQueue RetiredQueue, MessageQueues.IMessageQueue[] RollToQueue)
+        {
+            return false;
+        }
+        public Boolean ReassignQueue(MessageQueues.IMessageQueue QueueToReassign, MessageQueues.IMessageQueue ToQueue)
+        {
+            return false;
+        }
+        public Boolean ReassignQueue(MessageQueues.IMessageQueue QueueToReasign, MessageQueues.IMessageQueue[] ToQueue)
+        {
+            return false;
+        }
+        
     }
 }

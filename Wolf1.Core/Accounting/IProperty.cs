@@ -14,7 +14,7 @@ namespace Wolf1.Core.Accounting
         IAddress Location { get; set; }
         IPerson Owner { get; set; }
         Boolean Rental { get; set; }
-        int Owed { get; set; }
+        decimal Owed { get; set; }
         DateTime MortgageStart { get; set; }
         DateTime MortgageEnd { get; set; }
 

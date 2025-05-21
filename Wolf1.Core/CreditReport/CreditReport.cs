@@ -8,5 +8,7 @@ namespace Wolf1.Core.CreditReport
     public class CreditReport : ICreditReport, IBaseObject
     {
         public AccessControlList ACL { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public int FileWidth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public CreditReportRunMode RunMode { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }
