@@ -27,8 +27,11 @@ namespace Wolf1.Core.System
         {
             if (ABARecords[RecordToAdd.ABANumber] is not null)
                 return false;
-            this.ABARecords.Add(RecordToAdd.ABANumber, RecordToAdd)
+            ABARecords.Add(RecordToAdd.ABANumber, RecordToAdd);
             return true;
+        }
+        public bool RemoveABARecord(int ABANumberToRemove) {
+            return (ABARecords.Remove(ABANumberToRemove));
         }
     }
 }
