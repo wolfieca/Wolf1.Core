@@ -6,9 +6,9 @@ namespace Wolf1.Core.Management
 {
     public interface IWorkHours : ICompanyHours
     {
-        ITime WorkStartTime { get; set; }
-        ITime LunchStartTime { get; set; }
-        ITime LunchEndTime { get; set; }
-        ITime WorkEndTime { get; set; }
+        DateTime WorkStartTime { get; set; }
+        DateTime LunchStartTime { get; set; }
+        DateTime LunchEndTime { get; set; }
+        DateTime WorkEndTime { get; set; }
     }
 }
