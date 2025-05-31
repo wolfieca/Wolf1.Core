@@ -6,9 +6,9 @@ namespace Wolf1.Core.Management
 {
     public interface IHistoryItem
     {
-        DateTime ContactTime { get; set; }
-        IUser User { get; set; }
-        String Note { get; set; }
-        Messages.IMessage Message { get; set; }
+        DateTime ContactTime { get; }
+        IUser User { get; }
+        String Note { get; }
+        Messages.IMessage Message { get; }
     }
 }

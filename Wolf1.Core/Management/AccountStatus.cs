@@ -15,7 +15,7 @@ namespace Wolf1.Core.Management
         public String Code { get; private set; }
         public Boolean CanLettersBeSent { get; private set; }
         public String Description { get; private set; }
-        public Bankruptcy BankruptStatus = Bankruptcy.NO;
+        public Bankruptcy BankruptStatus { get; private set; } = Bankruptcy.NO;
         public char StatusCategory { get; private set; }
         public char StatusGroup { get; private set; }
         public Boolean IncludeOnReturnReport { get; private set; }

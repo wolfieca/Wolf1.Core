@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Authors>Robert Serrano</Authors>
     <Description>This project consists of the core classes for Wolf1. The primary goal of this library is to provide a single location for all the APIs that are used by the Wolf1 System (client and server).</Description>
     <Copyright>Copyright (c) 2019 Robert Serrano (wolfieca.rs@gmail.com</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>12.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>

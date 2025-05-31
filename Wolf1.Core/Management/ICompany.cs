@@ -6,32 +6,32 @@ namespace Wolf1.Core.Management
 {
     public interface ICompany
     {
-        string Name { get; set; }
-        IAddress CompanyAddress { get; set; }
-        ICompany Parent { get; set; }
-        IClassOfBusiness BusinessClass { get; set; }
-        DateTime AddDate { get; set; }
-        IUser AddUser { get; set; }
-        DateTime UpdateDate { get; set; }
-        IUser UpdateUser { get; set; }
-        Dictionary<String, IPhoneNumber> PhoneNumber { get; set; }
-        Dictionary<String,ICompanyHours> Hours { get; set; }
-        Boolean AllowMarketingMaterials { get; set; }
-        IAddress PhysicalAddress { get; set; }
-        IAddress MailingAddress { get; set; }
-        List<IContact> Contacts { get; set; }
-        IHistory History { get; set; }
-        MessageQueues.IMessageQueue CompanyQueue { get; set; }
-        List<String> Notes { get; set; }
-        Boolean Client { get; set; }
-        Boolean Lead { get; set; }
-        Boolean Active { get; set; }
-        Boolean Inactive { get; set; }
-        Boolean Dead { get; set; }
-        DateTime ChangedToClient { get; set; }
-        DateTime ChangedToLead { get; set; }
-        DateTime ChangedToActive { get; set; }
-        DateTime ChangedToInactive { get; set; }
-        DateTime ChangedToDead { get; set; }
+        string Name { get;  }
+        IAddress CompanyAddress { get;  }
+        ICompany Parent { get;  }
+        IClassOfBusiness BusinessClass { get;  }
+        DateTime AddDate { get;  }
+        IUser AddUser { get;  }
+        DateTime UpdateDate { get;  }
+        IUser UpdateUser { get;  }
+        Dictionary<String, IPhoneNumber> PhoneNumber { get;  }
+        Dictionary<String,ICompanyHours> Hours { get;  }
+        Boolean AllowMarketingMaterials { get;  }
+        IAddress PhysicalAddress { get;  }
+        IAddress MailingAddress { get;  }
+        List<IContact> Contacts { get;  }
+        IHistory History { get;  }
+        MessageQueues.IMessageQueue CompanyQueue { get;  }
+        List<String> Notes { get;  }
+        Boolean Client { get;  }
+        Boolean Lead { get;  }
+        Boolean Active { get;  }
+        Boolean Inactive { get;  }
+        Boolean Dead { get;  }
+        DateTime ChangedToClient { get;  }
+        DateTime ChangedToLead { get;  }
+        DateTime ChangedToActive { get;  }
+        DateTime ChangedToInactive { get;  }
+        DateTime ChangedToDead { get;  }
     }
 }

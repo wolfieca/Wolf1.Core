@@ -4,10 +4,10 @@ using System.Text;
 
 namespace Wolf1.Core.Management
 {
-    public class ClassOfBusiness
+    public record ClassOfBusiness
     {
-        public string COBCode { get; private set; }
-        public string Title { get; private set; }
-        public bool IncludeInCreditReports { get; private set; }
+        public string COBCode { get;  }
+        public string Title { get;  }
+        public bool IncludeInCreditReports { get;  }
     }
 }

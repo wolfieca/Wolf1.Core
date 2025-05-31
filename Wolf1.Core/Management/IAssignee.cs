@@ -14,7 +14,7 @@ namespace Wolf1.Core.Management
     /// </summary>
     public interface IAssignee : ICompany
     {
-        List<IDebtor> AssignedDebtors { get; set; }
+        List<IDebtor> AssignedDebtors { get; }
         Boolean Assign(IDebtor DebtorToAssign);
         Boolean Recall(IDebtor DebtorToAssign);
     }
