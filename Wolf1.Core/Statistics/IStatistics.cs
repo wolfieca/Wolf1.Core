@@ -6,11 +6,12 @@ namespace Wolf1.Core.Statistics
 {
     public interface IStatistics
     {
-        String Month { get; set; }
-        String Year { get; set; }
-        Dictionary<String, int> Statistics { get; set; }
+        String Month { get;}
+        String Year { get; }
+        Dictionary<String, int> Statistics { get; }
 
         Boolean Update(String StatisticName, int value);
 
     }
+
 }

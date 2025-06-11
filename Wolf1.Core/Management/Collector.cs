@@ -5,36 +5,41 @@ using Wolf1.Core.Document;
 using Wolf1.Core.MessageQueues;
 using Wolf1.Core.Script;
 using Wolf1.Core.Statistics;
+using Wolf1.Core.System;
 
 namespace Wolf1.Core.Management
 {
     public class Collector : ICollector
     {
+        /*public Collector()
+        {
+        }*/
+
         public string CollectorID {get; }
         public IPersonName Alias {get; }
         public List<IOffice> CollectionOffices {get; }
         public List<string> Specialty {get; }
         public IMessageQueue CollectorQueue {get; }
-        public decimal HighBalance {get; }
-        public decimal LowBalance {get; }
+        public Money HighBalance {get; }
+        public Money LowBalance {get; }
         public IStatistics Statistics {get; }
         public bool AutoReassignOldAccounts {get; }
         public int MonthsBeforeAutoReassigb {get; }
         public int StrategyWaitDays {get; }
 
-        public decimal MonthlyQuotaHigh => throw new NotImplementedException();
+        public Money MonthlyQuotaHigh => throw new NotImplementedException();
 
         public DateTime MonthlyQuotaHighDate => throw new NotImplementedException();
 
-        public decimal MonthlyQuotaLow => throw new NotImplementedException();
+        public Money MonthlyQuotaLow => throw new NotImplementedException();
 
         public DateTime MonthlyQuotaLowDate => throw new NotImplementedException();
 
-        public decimal MonthlyQuotaPromised => throw new NotImplementedException();
+        public Money MonthlyQuotaPromised => throw new NotImplementedException();
 
-        public decimal CurrentAmountCollected => throw new NotImplementedException();
+        public Money CurrentAmountCollected => throw new NotImplementedException();
 
-        public decimal CurrentAmountPromised => throw new NotImplementedException();
+        public Money CurrentAmountPromised => throw new NotImplementedException();
 
         public int MaxQueueSize => throw new NotImplementedException();
 

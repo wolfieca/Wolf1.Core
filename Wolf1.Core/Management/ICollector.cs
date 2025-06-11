@@ -4,6 +4,7 @@ using System.Text;
 using Wolf1.Core.MessageQueues;
 using Wolf1.Core.Script;
 using Wolf1.Core.Statistics;
+using Wolf1.Core.System;
 
 namespace Wolf1.Core.Management
 {
@@ -14,19 +15,19 @@ namespace Wolf1.Core.Management
         List<IOffice> CollectionOffices { get;  }
         List<String> Specialty { get;  }
         IMessageQueue CollectorQueue { get;  }
-        Decimal HighBalance { get;  }
-        Decimal LowBalance { get;  }
+        Money HighBalance { get;  }
+        Money LowBalance { get;  }
         IStatistics Statistics { get;  }
         Boolean AutoReassignOldAccounts { get;  }
         int MonthsBeforeAutoReassigb { get;  }
         int StrategyWaitDays { get;  }
-        Decimal MonthlyQuotaHigh { get; }
+        Money MonthlyQuotaHigh { get; }
         DateTime MonthlyQuotaHighDate { get; }
-        Decimal MonthlyQuotaLow { get; }
+        Money MonthlyQuotaLow { get; }
         DateTime MonthlyQuotaLowDate { get; }
-        Decimal MonthlyQuotaPromised { get; }
-        Decimal CurrentAmountCollected { get; }
-        Decimal CurrentAmountPromised { get; }
+        Money MonthlyQuotaPromised { get; }
+        Money CurrentAmountCollected { get; }
+        Money CurrentAmountPromised { get; }
         int MaxQueueSize { get; }
         int MaxNewbizSize { get; }
         String GroupName { get;  }

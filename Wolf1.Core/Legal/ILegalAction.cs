@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using System.Text;
 using Wolf1.Core.Management;
+using Wolf1.Core.Model;
+using Wolf1.Core.System;
 
 namespace Wolf1.Core.Legal
 {
     public interface ILegalAction
     {
-        List<IDebt> IncludedDebts { get; set; }
-        DateTime SuitDate { get; set; }
-        int SuitAmount { get; set; }
-        Dictionary<String, ILegal> LegalData { get; set; }
+        List<Account> IncludedDebts { get; }
+        DateTime SuitDate { get; }
+        Money SuitAmount { get; }
+        Dictionary<String, ILegal> LegalData { get; }
     }
 }
