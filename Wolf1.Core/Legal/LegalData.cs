@@ -5,7 +5,8 @@ using Wolf1.Core.Management;
 
 namespace Wolf1.Core.Legal
 {
-    public class LegalData 
+    public class LegalData
     {
+        public Dictionary<string, ILegal> Data;
     }
 }

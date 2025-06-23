@@ -4,7 +4,6 @@ using System.ComponentModel;
 using System.Diagnostics.Contracts;
 using System.Resources;
 using System.Text;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Wolf1.Core.Document;
 using Wolf1.Core.Legal;
 using Wolf1.Core.Letters;
@@ -13,6 +12,7 @@ using Wolf1.Core.MessageQueues;
 using Wolf1.Core.Messages;
 using Wolf1.Core.Reports;
 using Wolf1.Core.Script;
+using Wolf1.Core.System;
 
 namespace Wolf1.Core.Model
 {
@@ -64,17 +64,17 @@ namespace Wolf1.Core.Model
         public DateTime DateSentOut { get; private set; }
         public DateTime DateLastSeen { get; private set; }
         public DateTime DateLastNewBusiness { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> Owed { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> Paid { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> Adjusted { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> Original { get; private set; }
+        public Dictionary<MoneyTypes, Money> Owed { get; private set; }
+        public Dictionary<MoneyTypes, Money> Paid { get; private set; }
+        public Dictionary<MoneyTypes, Money> Adjusted { get; private set; }
+        public Dictionary<MoneyTypes, Money> Original { get; private set; }
         public Dictionary<MoneyTypes, Boolean> AccruesInterest { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> Interest { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> TotalOwed { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> TotalPaid { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> TotalAdjusted { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> TotalOriginal { get; private set; }
-        public Dictionary<MoneyTypes, Decimal> TotalInterest { get; private set; }
+        public Dictionary<MoneyTypes, Money> Interest { get; private set; }
+        public Dictionary<MoneyTypes, Money> TotalOwed { get; private set; }
+        public Dictionary<MoneyTypes, Money> TotalPaid { get; private set; }
+        public Dictionary<MoneyTypes, Money> TotalAdjusted { get; private set; }
+        public Dictionary<MoneyTypes, Money> TotalOriginal { get; private set; }
+        public Dictionary<MoneyTypes, Money> TotalInterest { get; private set; }
 
         public Boolean AccrueInterest { get; private set; } = true;
         public DateTime LastInterestDate { get; private set; }
